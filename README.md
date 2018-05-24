@@ -16,11 +16,18 @@ yarn build
 ### Lerna
 
 Allows management of separate releasable packages within the same repository. Provides linkage across packages, and
-allows independent versioning.
+allows independent versioning. Means I can make changes to central dependencies and run CI against all consumers of that
+dependency at once.
 
 ### Conventional commits
 
-Used in conjunctions with Lerna to allow semantic versions of packages to be derived from commit messages.
+Used in conjunctions with Lerna to allow semantic versions of packages to be derived from commit messages. Allow
+generation of useful changelogs.
+
+### Styled components
+
+Although I much prefer the separation of concerns of CSS in .css files, in programming I prefer consistency above all
+other things. Styled Components allows the same solution for styling to be used within both the web and mobile projects.
 
 ### Webpack
 

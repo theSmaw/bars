@@ -9,7 +9,7 @@ injectGlobal`
 
   body {
     background: #fbf7f2;
-    font-family: 'QuickSand-Regular';
+    font-family: 'QuickSand-Regular', sans-serif;
   }
 `;
 
