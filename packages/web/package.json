@@ -1,0 +1,27 @@
+{
+  "name": "bars",
+  "version": "0.0.1",
+  "description": "Bars.",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/theSmaw/bars"
+  },
+  "maintainers": [
+    {
+      "name": "Ben Smawfield",
+      "email": "bensmawfield@gmail.com"
+    }
+  ],
+  "license": "UNLICENSED",
+  "engines": {
+    "npm": ">=4.0.0",
+    "node": ">=6.3.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4"
+  }
+}

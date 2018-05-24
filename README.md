@@ -1,3 +1,16 @@
+## Getting started
+
+```
+npm install -g yarn
+yarn install
+```
+
+## Build
+
+```
+yarn build
+```
+
 ## Technology choices
 
 ### Lerna
@@ -16,3 +29,7 @@ A faster (better caching and optimisation) alternative to npm for dependency pac
 ### Yarn workspaces
 
 Allows for easy and optimised installation of dependencies across
+
+## Caveats
+
+- Development environment has only been tested on OSX.
