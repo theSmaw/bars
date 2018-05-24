@@ -25,7 +25,8 @@ Used in conjunctions with Lerna to allow semantic versions of packages to be der
 ### Webpack
 
 Allows simple(ish) bundling of JavaScript and static assets. Allows easily managed-by-environment optimisation through
-tree-shaking and minification, source-maps, and automatic compilation on changes.
+tree-shaking and minification, source-maps, and automatic compilation on changes. Also allows app to be built
+offline-first as a Progressive Web App, using Service Workers.
 
 ### Yarn
 

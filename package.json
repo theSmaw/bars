@@ -2,6 +2,7 @@
 	"devDependencies": {
 		"lerna": "^2.9.0",
 		"webpack": "^4.8.3",
-		"webpack-merge": "^4.1.2"
+		"webpack-merge": "^4.1.2",
+		"workbox-webpack-plugin": "^3.2.0"
 	}
 }
