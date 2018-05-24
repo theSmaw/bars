@@ -1,9 +1,10 @@
 import { injectGlobal } from 'styled-components';
+import QuickSandRegular from '../../../assets/fonts/QuickSand-Regular.otf';
 
 injectGlobal`
   @font-face {
     font-family: 'QuickSand-Regular';
-    src: url('../../../assets/fonts/QuickSand-Regular.otf');
+    src: url(${QuickSandRegular});
   }
 
   body {
