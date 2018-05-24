@@ -22,6 +22,11 @@ allows independent versioning.
 
 Used in conjunctions with Lerna to allow semantic versions of packages to be derived from commit messages.
 
+### Webpack
+
+Allows simple(ish) bundling of JavaScript and static assets. Allows easily managed-by-environment optimisation through
+tree-shaking and minification, source-maps, and automatic compilation on changes.
+
 ### Yarn
 
 A faster (better caching and optimisation) alternative to npm for dependency package management.
