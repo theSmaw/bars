@@ -24,10 +24,19 @@ dependency at once.
 Used in conjunctions with Lerna to allow semantic versions of packages to be derived from commit messages. Allow
 generation of useful changelogs.
 
+### React
+
+A fantastic solution for UI development. Declarative rendering greatly lower complexity than imperative approach.
+Encourages sensible componentisation and UI reuse.
+
 ### Styled components
 
 Although I much prefer the separation of concerns of CSS in .css files, in programming I prefer consistency above all
 other things. Styled Components allows the same solution for styling to be used within both the web and mobile projects.
+
+### Stylelint
+
+To avoid errors and ensure consistency within CSS code.
 
 ### Webpack
 

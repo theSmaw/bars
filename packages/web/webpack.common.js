@@ -13,6 +13,10 @@ module.exports = {
   },
   module: {
     rules: [{
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: ['babel-loader']
+    }, {
       test: /\.(otf)$/,
       use: ['file-loader']
     }]
@@ -36,7 +40,12 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new webpack.HashedModuleIdsPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Bars'
-    })
+      cache: true,
+      template: './src/index.html',
+      filename: './index.html'
+    }),
   ],
+  resolve: {
+    extensions: ['.js', '.jsx', '.css']
+  }
 };

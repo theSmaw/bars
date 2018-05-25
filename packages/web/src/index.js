@@ -1,5 +1,9 @@
+import ReactDOM from 'react-dom';
 import { injectGlobal } from 'styled-components';
+
 import QuickSandRegular from '../../../assets/fonts/QuickSand-Regular.otf';
+
+import App from './App.jsx';
 
 injectGlobal`
   @font-face {
@@ -26,12 +30,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-function component() {
-  var element = document.createElement('div');
-
-  element.innerHTML = 'Hello world';
-
-  return element;
-}
-
-document.body.appendChild(component());
+ReactDOM.render(
+  App(),
+  document.getElementById('root')
+);

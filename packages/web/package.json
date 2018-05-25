@@ -25,6 +25,10 @@
     "node": ">=6.3.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
@@ -39,6 +43,7 @@
   },
   "dependencies": {
     "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "styled-components": "^3.2.6"
   }
 }
