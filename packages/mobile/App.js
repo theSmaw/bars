@@ -14,6 +14,7 @@ export default class App extends Component {
 }
 
 const Welcome = styled.Text`
+  font-family: Quicksand;
   font-size: 20px;
   text-align: center;
   margin: 10px;
