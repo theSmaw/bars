@@ -6,8 +6,8 @@
     "build": "webpack --config webpack.prod.js",
     "ci": "npm-run-all lint",
     "lint": "npm-run-all lint:css lint:js",
-    "lint:css": "stylelint './src/**/*.jsx'",
-    "lint:js": "eslint --ext .jsx,.js src/",
+    "lint:css": "stylelint './src/**/*.js'",
+    "lint:js": "eslint --ext .js src/",
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "test": "npm-run-all test:unit",
     "test:unit": "jest --config ./jest.config.js --coverage"

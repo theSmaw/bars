@@ -13,7 +13,7 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.(js|jsx)$/,
+      test: /\.(js)$/,
       exclude: /node_modules/,
       use: ['babel-loader']
     }, {
@@ -46,6 +46,6 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.css']
+    extensions: ['.js', '.css']
   }
 };

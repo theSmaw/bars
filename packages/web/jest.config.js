@@ -13,10 +13,10 @@ const jestConfig = {
   setupFiles: [],
   setupTestFrameworkScriptFile: here('./jest.setup.js'),
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  testMatch: ['**/?(*.)(spec).js?(x)'],
+  testMatch: ['**/?(*.)(spec).js'],
   testPathIgnorePatterns: [...ignores],
   coveragePathIgnorePatterns: [...ignores],
-  collectCoverageFrom: ['src/**/*.{js,jsx}', '!src/**/index.{js,jsx}'],
+  collectCoverageFrom: ['src/**/*.{js}', '!src/**/index.{js}'],
   coverageDirectory: '<rootDir>/reports/coverage',
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|scss|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
