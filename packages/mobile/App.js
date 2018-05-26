@@ -1,32 +1,27 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import styled from 'styled-components';
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
+      <Container>
+        <Welcome>
           Hello world
-        </Text>
-      </View>
+        </Welcome>
+      </Container>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  }
-});
+const Welcome = styled.Text`
+  fontSize: 20px;
+  textAlign: center;
+  margin: 10px;
+`;
+
+const Container = styled.View`
+  flex: 1;
+  justifyContent: center;
+  alignItems: center;
+  backgroundColor: #004499
+`;
