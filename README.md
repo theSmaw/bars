@@ -55,3 +55,4 @@ Allows for easy and optimised installation of dependencies across
 ## Caveats
 
 - Development environment has only been tested on OSX.
+- Mobile app only tested on iOS.
