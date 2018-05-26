@@ -11,7 +11,7 @@ const ignores = [
 const jestConfig = {
   cache: false,
   setupFiles: [],
-  setupTestFrameworkScriptFile: here('./jest.setup.js'),
+  setupTestFrameworkScriptFile: here('./test/jest.setup.js'),
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testMatch: ['**/?(*.)(spec).js'],
   testPathIgnorePatterns: [...ignores],

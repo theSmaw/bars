@@ -11,6 +11,14 @@ yarn install
 yarn build
 ```
 
+## Running integration tests
+
+Only available within /web currently.
+
+```
+./node_modules/.bin/cypress open
+```
+
 ## Technology choices
 
 ### Lerna
@@ -56,3 +64,10 @@ Allows for easy and optimised installation of dependencies across
 
 - Development environment has only been tested on OSX.
 - Mobile app only tested on iOS.
+
+## TODO
+
+- A fair bit of configuration (e.g. jest.config) is duplicated across packages. This could be moved into shared
+configuration, or better we can look at creating a /scripts package for common tooling scripts (e.g. yarn run
+scripts/test)
+- Store feature test reports in /reports

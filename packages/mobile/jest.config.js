@@ -12,7 +12,7 @@ const jestConfig = {
   cache: false,
   preset: 'react-native',
   setupFiles: [],
-  setupTestFrameworkScriptFile: here('./jest.setup.js'),
+  setupTestFrameworkScriptFile: here('./test/jest.setup.js'),
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testMatch: ['**/?(*.)(spec).js'],
   testPathIgnorePatterns: [...ignores],
