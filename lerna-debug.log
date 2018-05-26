@@ -1,0 +1,76 @@
+0 silly input [ 'validate' ]
+1 silly flags { _: [ 'run' ],
+1 silly flags   'reject-cycles': false,
+1 silly flags   rejectCycles: false,
+1 silly flags   script: 'validate',
+1 silly flags   args: [] }
+2 verbose rootPath /Users/benjaminsmawfield/Documents/lerna
+3 info version 2.11.0
+4 silly existsSync /Users/benjaminsmawfield/Documents/lerna/VERSION
+5 silly initialize attempt
+6 silly initialize success
+7 silly execute attempt
+8 silly runScriptInDir validate [] mobile
+9 silly getExecOpts { cwd: '/Users/benjaminsmawfield/Documents/lerna/packages/mobile' }
+10 silly runScriptInDir validate [] web
+11 silly getExecOpts { cwd: '/Users/benjaminsmawfield/Documents/lerna/packages/web' }
+12 error validate Errored while running script in 'mobile'
+13 error execute callback with error
+14 error Error: Command failed: npm run validate
+14 error npm ERR! code ELIFECYCLE
+14 error npm ERR! errno 1
+14 error npm ERR! mobile@0.0.1 lint:js: `eslint --ext .js src/`
+14 error npm ERR! Exit status 1
+14 error npm ERR!
+14 error npm ERR! Failed at the mobile@0.0.1 lint:js script.
+14 error npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+14 error
+14 error npm ERR! A complete log of this run can be found in:
+14 error npm ERR!     /Users/benjaminsmawfield/.npm/_logs/2018-05-26T09_01_58_971Z-debug.log
+14 error ERROR: "lint:js" exited with 1.
+14 error npm ERR! code ELIFECYCLE
+14 error npm ERR! errno 1
+14 error npm ERR! mobile@0.0.1 lint: `npm-run-all lint:css lint:js`
+14 error npm ERR! Exit status 1
+14 error npm ERR!
+14 error npm ERR! Failed at the mobile@0.0.1 lint script.
+14 error npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+14 error
+14 error npm ERR! A complete log of this run can be found in:
+14 error npm ERR!     /Users/benjaminsmawfield/.npm/_logs/2018-05-26T09_01_59_000Z-debug.log
+14 error ERROR: "lint" exited with 1.
+14 error npm ERR! code ELIFECYCLE
+14 error npm ERR! errno 1
+14 error npm ERR! mobile@0.0.1 validate: `npm-run-all lint test`
+14 error npm ERR! Exit status 1
+14 error npm ERR!
+14 error npm ERR! Failed at the mobile@0.0.1 validate script.
+14 error npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+14 error
+14 error npm ERR! A complete log of this run can be found in:
+14 error npm ERR!     /Users/benjaminsmawfield/.npm/_logs/2018-05-26T09_01_59_024Z-debug.log
+14 error
+14 error > mobile@0.0.1 validate /Users/benjaminsmawfield/Documents/lerna/packages/mobile
+14 error > npm-run-all lint test
+14 error
+14 error
+14 error > mobile@0.0.1 lint /Users/benjaminsmawfield/Documents/lerna/packages/mobile
+14 error > npm-run-all lint:css lint:js
+14 error
+14 error
+14 error > mobile@0.0.1 lint:css /Users/benjaminsmawfield/Documents/lerna/packages/mobile
+14 error > stylelint './src/**/*.js'
+14 error
+14 error
+14 error > mobile@0.0.1 lint:js /Users/benjaminsmawfield/Documents/lerna/packages/mobile
+14 error > eslint --ext .js src/
+14 error
+14 error
+14 error /Users/benjaminsmawfield/Documents/lerna/packages/mobile/src/App.js
+14 error   4:16  error  Component should be written as a pure function  react/prefer-stateless-function
+14 error
+14 error ✖ 1 problem (1 error, 0 warnings)
+14 error
+14 error
+14 error     at Promise.all.then.arr (/Users/benjaminsmawfield/Documents/lerna/node_modules/lerna/node_modules/execa/index.js:236:11)
+14 error     at <anonymous>

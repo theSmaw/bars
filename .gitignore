@@ -1,5 +1,6 @@
 dist
+lerna-debug.log
 node_modules
+reports
 .idea
 .DS_Store
-reports

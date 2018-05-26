@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components/native';
 
-export default class App extends Component {
-  render() {
-    return (
-      <Container>
-        <Welcome>
-          Hello world
-        </Welcome>
-      </Container>
-    );
-  }
+export default function App() {
+  return (
+    <Container>
+      <Welcome>
+        Hello world
+      </Welcome>
+    </Container>
+  );
 }
 
 const Welcome = styled.Text`
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   font-size: 20px;
   text-align: center;
   margin: 10px;

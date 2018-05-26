@@ -4,13 +4,13 @@
   "description": "Bars.",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "ci": "npm-run-all lint",
     "lint": "npm-run-all lint:css lint:js",
     "lint:css": "stylelint './src/**/*.js'",
     "lint:js": "eslint --ext .js src/",
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "test": "npm-run-all test:unit",
-    "test:unit": "jest --config ./jest.config.js --coverage"
+    "test:unit": "jest --config ./jest.config.js --coverage",
+    "validate": "npm-run-all lint test"
   },
   "repository": {
     "type": "git",
