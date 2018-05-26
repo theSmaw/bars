@@ -14,14 +14,14 @@ export default class App extends Component {
 }
 
 const Welcome = styled.Text`
-  fontSize: 20px;
-  textAlign: center;
+  font-size: 20px;
+  text-align: center;
   margin: 10px;
 `;
 
 const Container = styled.View`
   flex: 1;
-  justifyContent: center;
-  alignItems: center;
-  backgroundColor: #004499
+  justify-content: center;
+  align-items: center;
+  background-color: #004499
 `;
