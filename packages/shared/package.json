@@ -1,16 +1,11 @@
 {
-  "name": "bars-web",
+  "name": "bars-shared",
   "version": "0.0.1",
-  "description": "Bars.",
+  "description": "Shared code for the Bars project",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "lint": "npm-run-all lint:css lint:js",
-    "lint:css": "stylelint './src/**/*.js'",
+    "lint": "npm-run-all lint:js",
     "lint:js": "eslint --ext .js src/",
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "test": "npm run test:unit && npm run test:feature",
-    "test:cypress": "cypress run",
-    "test:feature": "npm-run-all -p -r start test:cypress",
+    "test": "npm run test:unit",
     "test:unit": "jest --config ./jest.config.js --coverage",
     "validate": "npm-run-all lint test"
   },
@@ -18,6 +13,7 @@
     "type": "git",
     "url": "https://www.github.com/theSmaw/bars"
   },
+  "main": "./src/index.js",
   "maintainers": [
     {
       "name": "Ben Smawfield",
@@ -33,6 +29,8 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-export-default": "^7.0.0-alpha.20",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
@@ -47,26 +45,13 @@
     "eslint-plugin-react": "^7.8.2",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
-    "npm-run-all": "^4.1.3",
-    "stylelint": "^9.2.1",
-    "stylelint-config-recommended": "^2.1.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.3.1",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^2.1.4",
-    "webpack-dev-server": "^3.1.4",
-    "webpack-merge": "^4.1.2",
-    "workbox-webpack-plugin": "^3.2.0"
+    "npm-run-all": "^4.1.3"
   },
   "dependencies": {
-    "bars-shared": "^0.0.1",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
-    "redux-thunk": "^2.2.0",
-    "styled-components": "^3.2.6",
-    "whatwg-fetch": "^2.0.4"
+    "redux-thunk": "^2.2.0"
   }
 }

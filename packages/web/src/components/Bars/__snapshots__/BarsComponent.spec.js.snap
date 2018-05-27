@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BarsComponent Should render bars 1`] = `
+<div
+  className="bars"
+>
+  <BarComponent
+    key="0"
+    limit={50}
+    value={1}
+  />
+  <BarComponent
+    key="1"
+    limit={50}
+    value={2}
+  />
+  <BarComponent
+    key="2"
+    limit={50}
+    value={3}
+  />
+</div>
+`;

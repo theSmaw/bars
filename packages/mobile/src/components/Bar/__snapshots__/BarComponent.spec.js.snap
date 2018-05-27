@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BarComponent Should render with the correct value 1`] = `
+<Styled(Component)>
+  <Styled(Component)
+    limit={50}
+    value={5}
+  >
+    <Styled(Text)>
+      5
+    </Styled(Text)>
+  </Styled(Component)>
+</Styled(Component)>
+`;

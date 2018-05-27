@@ -1,10 +1,18 @@
+import 'whatwg-fetch';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { injectGlobal } from 'styled-components';
+import { Provider } from 'react-redux';
+import { applyMiddleware, createStore } from 'redux';
+import thunkMiddleware from 'redux-thunk';
 
 import QuickSandRegular from '../../../assets/fonts/Quicksand-Regular.otf';
 
-import App from './App';
+import AppComponent from './components/App/AppComponent';
 
+import reducers from './reducers';
+
+// setup global styles
 injectGlobal`
   @font-face {
     font-family: 'QuickSand-Regular';
@@ -17,6 +25,7 @@ injectGlobal`
   }
 `;
 
+// enable offline-first
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
@@ -30,7 +39,12 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// create Redux store
+const store = createStore(reducers, applyMiddleware(thunkMiddleware));
+
 ReactDOM.render(
-  App(),
+  <Provider store={store}>
+    { AppComponent() }
+  </Provider>,
   document.getElementById('root')
 );
