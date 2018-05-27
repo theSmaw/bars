@@ -25,6 +25,10 @@ BarComponent.propTypes = {
   value: PropTypes.number.isRequired
 };
 
+function getProgressWidth({ value, limit }) {
+  return Math.min((value / limit) * 100, 100);
+}
+
 const Progress = styled.div`
   color: #fff;
   display: flex;
@@ -33,7 +37,7 @@ const Progress = styled.div`
   justify-content: center;
   margin: 0 0 20px 0;
   text-align: center;
-  background-color: #66c1d2;
+  background-color: ${props => (props.value > props.limit ? '#ff0000' : '#66c1d2')};
   transition: width .6s ease;
-  width: ${props => (props.value / props.limit) * 100}%;
+  width: ${getProgressWidth}%;
 `;

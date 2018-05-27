@@ -5,7 +5,14 @@ import { WithBarsContainer } from 'bars-shared';
 
 import BarComponent from '../Bar/BarComponent';
 
-export function BarsComponent({ bars, limit }) {
+export function BarsComponent({
+  bars,
+  buttons,
+  limit,
+  onButtonClicked,
+  onSelected,
+  selectedBar
+}) {
   return (
     <div className="bars">
       {
@@ -22,13 +29,54 @@ export function BarsComponent({ bars, limit }) {
           />
         ))
       }
+      <div>
+        <select
+          className="barsSelect"
+          onChange={
+            /* istanbul ignore next */
+            e => onSelected(e.target.value)
+          }
+          value={selectedBar}
+        >
+          {
+            bars.map((bar, index) => (
+              <option
+                key={index} // eslint-disable-line react/no-array-index-key
+                value={index}
+              >
+                Bar {index + 1}
+              </option>
+            ))
+          }
+        </select>
+        <div>
+          {
+            buttons.map((button, index) => (
+              <button
+                className="barsButton"
+                key={index} // eslint-disable-line react/no-array-index-key
+                onClick={
+                  /* istanbul ignore next */
+                  () => onButtonClicked(button)
+                }
+              >
+                {button}
+              </button>
+            ))
+          }
+        </div>
+      </div>
     </div>
   );
 }
 
 BarsComponent.propTypes = {
   bars: PropTypes.arrayOf(PropTypes.number).isRequired,
-  limit: PropTypes.number.isRequired
+  buttons: PropTypes.arrayOf(PropTypes.number).isRequired,
+  limit: PropTypes.number.isRequired,
+  onButtonClicked: PropTypes.func.isRequired,
+  onSelected: PropTypes.func.isRequired,
+  selectedBar: PropTypes.number.isRequired
 };
 
 export default WithBarsContainer(BarsComponent);

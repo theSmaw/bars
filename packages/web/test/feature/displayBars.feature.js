@@ -1,4 +1,4 @@
-describe('Application', () => {
+describe('Displaying bars', () => {
 
   beforeEach(() => {
     cy.server();

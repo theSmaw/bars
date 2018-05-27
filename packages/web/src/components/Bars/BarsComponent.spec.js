@@ -9,7 +9,11 @@ describe('BarsComponent', () =>
     const barsComponent = shallow(
       <BarsComponent
         bars={[1, 2, 3]}
+        buttons={[10, 20, -30]}
         limit={50}
+        onButtonClicked={() => {}}
+        onSelected={() => {}}
+        selectedBar={0}
       />
     );
 

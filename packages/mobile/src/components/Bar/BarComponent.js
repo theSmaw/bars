@@ -30,7 +30,7 @@ const Bar = styled.View`
 /* istanbul ignore next */
 const Progress = styled.View`
   display: flex;
-  height: 35px;
+  height: 50px;
   flex-direction: column;
   justify-content: center;
   margin: 0 0 20px 0;

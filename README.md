@@ -8,7 +8,8 @@ applications.
 For web, I've followed trunk based development, with unit and feature tests allowing continuous deployment - commits
 pushed to master are auto-deployed to Heroku - https://pedro-the-sealion.herokuapp.com/
 
-For mobile, I've not yet taken delivery beyond the iOS simulator on my MacBook.
+For mobile, I've not yet taken delivery beyond the iOS simulator on my MacBook. I've also limited scope for this
+iteration to just showing the bar values - no ability for the user to change the bar values yet.
 
 ## Caveats
 
@@ -32,6 +33,11 @@ https://github.com/facebook/react-native/issues/17469
 - Error handling - currently we don't handle anything going wrong with the network requests
 - Show a spinner when the data is loading from the network
 - Fix mobile to be landscape only
+- Server-side rendering
+- Style <select> and <buttons> on Web
+- Add ability to change bar values to mobile
+- Rethink some of the variable and property names - I don't like that I have a bars.bars in the code
+- Refactor some of the repetition out of the feature tests
 
 ## Workflow
 

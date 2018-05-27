@@ -19,5 +19,57 @@ exports[`BarsComponent Should render bars 1`] = `
     limit={50}
     value={3}
   />
+  <div>
+    <select
+      className="barsSelect"
+      onChange={[Function]}
+      value={0}
+    >
+      <option
+        key="0"
+        value={0}
+      >
+        Bar 
+        1
+      </option>
+      <option
+        key="1"
+        value={1}
+      >
+        Bar 
+        2
+      </option>
+      <option
+        key="2"
+        value={2}
+      >
+        Bar 
+        3
+      </option>
+    </select>
+    <div>
+      <button
+        className="barsButton"
+        key="0"
+        onClick={[Function]}
+      >
+        10
+      </button>
+      <button
+        className="barsButton"
+        key="1"
+        onClick={[Function]}
+      >
+        20
+      </button>
+      <button
+        className="barsButton"
+        key="2"
+        onClick={[Function]}
+      >
+        -30
+      </button>
+    </div>
+  </div>
 </div>
 `;

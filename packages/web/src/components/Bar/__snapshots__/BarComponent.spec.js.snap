@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`BarComponent Should render values above the limit 1`] = `
+<BarComponent
+  limit={50}
+  value={55}
+>
+  <div
+    className="bar"
+  >
+    <styled.div
+      aria-valuemax={50}
+      aria-valuemin="0"
+      aria-valuenow={55}
+      className="progress"
+      limit={50}
+      role="progressbar"
+      value={55}
+    >
+      <div
+        aria-valuemax={50}
+        aria-valuemin="0"
+        aria-valuenow={55}
+        className="progress sc-bdVaJa ccmbpX"
+        role="progressbar"
+        value={55}
+      >
+        55
+      </div>
+    </styled.div>
+  </div>
+</BarComponent>
+`;
+
 exports[`BarComponent Should render with the correct value 1`] = `
 <BarComponent
   limit={50}
