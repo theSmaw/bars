@@ -71,3 +71,6 @@ Allows for easy and optimised installation of dependencies across
 configuration, or better we can look at creating a /scripts package for common tooling scripts (e.g. yarn run
 scripts/test)
 - Store feature test reports in /reports
+- Continuous Deployment for web is pretty rudimentary and the entire repo is copied to Heroku where we then rebuild our
+deployables. Rather, we could create a Docker image containing only our deployable web application and move this over
+- Continuous Delivery for mobile

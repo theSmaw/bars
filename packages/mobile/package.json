@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "build": "eslint --ext .js src/",
     "lint": "npm-run-all lint:css lint:js",
     "lint:css": "stylelint './src/**/*.js'",
     "lint:js": "eslint --ext .js src/",

@@ -18,11 +18,42 @@ jobs:
       - run: yarn run lerna bootstrap
       - run: yarn run lerna run prepare
       - run: ls -la node_modules/.bin
-      - run: yarn validate
-
-
+      # - run: yarn validate
+      - run: yarn build
 
       - save_cache:
+          key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "yarn.lock" }}
+              - packages/web/dist
+
+  deploy:
+      docker:
+        - image: buildpack-deps:trusty
+
+      working_directory: ~/repo
+
+      steps:
+        - checkout
+        - restore_cache:
+            key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+        - run:
+            name: Deploy Master to Heroku
+            command: |
+              git status
+              git config --global user.email "bensmawfield@googlemail.com"
+              git config --global user.name "Smawfield, Benjamin Lukin"
+              git add -f .
+              git commit -m "Add distributable"
+              git push -f https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
