@@ -12,7 +12,6 @@ import AppComponent from './components/App/AppComponent';
 
 import reducers from './reducers';
 
-// setup global styles
 injectGlobal`
   @font-face {
     font-family: 'QuickSand-Regular';
@@ -25,21 +24,6 @@ injectGlobal`
   }
 `;
 
-// enable offline-first
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then((registration) => {
-        console.log('SW registered: ', registration);
-      })
-      .catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError);
-      });
-  });
-}
-
-// create Redux store
 const store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
 ReactDOM.render(
