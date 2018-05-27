@@ -18,7 +18,7 @@ jobs:
       - run: yarn run lerna bootstrap
       - run: yarn run lerna run prepare
       - run: ls -la node_modules/.bin
-      # - run: yarn validate
+      - run: yarn validate
       - run: yarn build
 
       - save_cache:
